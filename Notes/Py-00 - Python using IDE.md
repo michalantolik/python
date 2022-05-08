@@ -18,7 +18,7 @@
 
 ## Python for Data Science
 
-- **PyChamrm Pro**
+- **PyCharm Pro**
     - scientific mode ...
     - ... interactive scientific computing
     - ... data visualization

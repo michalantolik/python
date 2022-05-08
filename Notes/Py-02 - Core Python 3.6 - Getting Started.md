@@ -84,7 +84,7 @@ square(2)
 - ... or imported and run from another module
     - ... **`__name__ == moduleName`**
 
-**Pyhon Execution Model**
+**Python Execution Model**
 - `def` is a statement ...
 - ... top-level functions are defined when
     - ... a module is imported
@@ -199,7 +199,68 @@ p is p # True
 
 **Passing Arguments and Returning Values**
 - Function arguments are transferred using **pass-by-object-reference** ...
-- ... references to objects are copie, not the objets themselves
+- ... references to objects are copied, not the objets themselves
 
 **Function Arguments - Default Values**
 - Must come after those without default values
+
+**Default Value Evaluation**
+- `def` statement is executed at runtime
+- default arguments are evaluated when `def` is executed
+- Immutable default values do NOT cause problems
+- Mutable default values can cause confusing effects !!!
+
+### **CONCLUSION:**
+### - ALWAYS USE IMMUTABLE OBJECTS ...
+### - ... FOR DEFAULT VALUES !!
+
+<br>
+
+**Python Type System**
+- **Dynamic**
+    - type of objects are resolved at runtime
+    - you do NOT declare types for function parameters
+    - type declarations are unnecessary in Python
+    - names can be rebound as necessary to objects of any type
+- **Strong**
+
+**Python Scopes (LEGB)**
+- **Local**
+    - inside the current function
+    - ... function parameters
+    - ... other function variables
+- **Enclosing**
+    - inside enclosing functions
+    - ... function parameters
+    - ... other function variables    
+- **Global**
+    - at the top level of the module
+    - ... import statements
+    - ... funcation definitions
+    - ... class definitions
+- **Local**
+    - in the special built in modules
+
+**Python Scope - Notes**
+- Scopes in Python do NOT correspond to source code blocks
+
+**Python Scope - Rebinding Global Names**
+```python
+count = 0
+def set_count(c):
+    # rebinding ...
+    # ... global "count" variable will be used
+    global count 
+    count = c
+```
+**Checking Object type and its Attributes**
+```python
+import math
+type(math)
+
+print("dir(math) =", "\n", dir(math), "\n")
+print("dir(math.sin) =", "\n", dir(math.sin), "\n")
+
+print("math.sin.__name__ =", math.sin.__name__)
+print("math.sin.__doc__ =", math.sin.__doc__)
+```
