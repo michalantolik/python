@@ -137,6 +137,7 @@ s = str(496)
 ### float to string
 s = str(6.02e23)
 
+
 print("#################################")
 print("### IF STATEMENT, ELIF CLAUSE")
 print("#################################\n")
@@ -219,6 +220,7 @@ colors = {"crimson": 0xdc143c, "coral": 0xff7f50, "teal": 0x008080}
 for color in colors:
     print(color, colors[color])
 
+
 print("\n#################################")
 print('### "STR" TYPE')
 print("#################################\n")
@@ -266,6 +268,10 @@ b = s.startswith("fi")
 s = "first"
 b = s.endswith("st")
 
+# length of string
+count = len(s)
+
+
 print("#################################")
 print('### "BYTES" TYPE')
 print("#################################\n")
@@ -283,6 +289,9 @@ d = b[0]
 # split bytes
 b = b"some bytes"
 b = b.split()
+
+# length of bytes
+count = len(b)
 
 # encode string as bytes and decode back
 danish = "Har I et værelse til rådighed?"
@@ -315,6 +324,9 @@ a = [2, 4, "apple", 6, "organge", "pear", 8, 9]
 # append element to list
 a.append(1.618)
 
+# length of list
+count = len(a)
+
 # list constructor
 a = list("characters")
 
@@ -338,4 +350,5 @@ di['alice'] = 0
 # add dict element
 di['charles'] = 7
 
-print(di)
+# length of dict
+count = len(di)

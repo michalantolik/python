@@ -72,3 +72,51 @@ time.sleep(1)
 showCurrentTime()
 time.sleep(1)
 showCurrentTime()
+
+print("\n###################################################################")
+print("### FUNCTION ARGUMENTS - MUTABLE DEFAULT VALUE - TRICKY !!!")
+print("###################################################################\n")
+
+#######################################
+### Tricky behavior - AVOID !!!
+#######################################
+def add_spam(menu=[]):
+    menu.append("spam")
+    return menu
+
+# Calling "add_spam()" will result with ['spam', 'spam'].
+
+#######################################
+### Tricky behavior - SOLUTION !!!
+#######################################
+def add_spam(menu=None):
+    if menu is None:
+        menu = []
+    menu.append("spam")
+    return menu
+
+# Calling "add_spam()" more than once will result with ['spam'] for each call.
+# This is because a new object is created and pointed to by the "menu" variable ...
+# ... in each call of the "add_spam()" (provided that no argument is passed).
+
+print("###################################################################")
+print("### SCOPES - REBIND GLOBAL NAMES")
+print("###################################################################\n")
+
+count = 0
+def set_count(c):
+    global count # rebinding - global "count" variable will be used
+    count = c
+
+print("###################################################################")
+print("### CHECKING OBJECT TYPE AND ITS ATTRIBUTES")
+print("###################################################################\n")
+
+import math
+type(math)
+
+print("dir(math) =", "\n", dir(math), "\n")
+print("dir(math.sin) =", "\n", dir(math.sin), "\n")
+
+print("math.sin.__name__ =", math.sin.__name__)
+print("math.sin.__doc__ =", math.sin.__doc__)
