@@ -37,13 +37,10 @@
     - maps keys to values
     - also known as map or associative array
 - `list`
-    - sequence of objects
-    - **mutable**
+    - **Mutable** sequence of objects
 - `str`
-    - data type for string in Python
-    - sequence of unicode code points
-    - **immutable**
-    - single quotes or double quotes
+    - **Immutable** sequence of unicode code points
+    - ... single quotes or double quotes
 - `bytes`
     - data type for sequences of bytes
     - raw binary data
@@ -314,4 +311,65 @@ a = "jelly"
 b = "bean"
 
 a, b = b, a
+```
+
+## Collections - Strings
+
+**String basics**
+- IMMUTABLE sequence of unicode code points
+- Single quotes or double quotes
+
+```python
+s1 = "hello"                        # String
+s2 = "new" + "found" + "land"       # Concatenated string
+s3 = "".join(["new", "found"])      # Concatenated string using "join" (more efficient)
+s4 = "abc" * 3                      # Replicated string
+```
+
+**String - join and split**
+```python
+colors = ["red", "green", "blue"]  # List of strings
+joined = ";".join(colors)          # Concatenated string
+splitted = joined.split(";")       # Splitted string
+
+print("colors = ", colors)
+print("joined = ", joined)
+print("splitted = ", splitted)
+```
+
+**String - partition**
+```python
+s6 = "unforgetable"
+partitioned = s6.partition("forget")         # Partitioned string (into tuple)
+partA, partB, partC = s6.partition("forget") # Partitioned and unpacked
+
+print("s6 = ", s6)
+print("partitioned = ", partitioned)
+print("partA = ", partA)
+print("partB = ", partB)
+print("partC = ", partC)
+```
+
+**String - format**
+```python
+f1 = "The age of {} is {}".format("Jim", 32)
+f2 = "The age of {0} is {1}".format("Jim", 32)
+f3 = "The age of {0} is {1}. {0} lives in London".format("Jim", 32)
+f4 = "The age of {name} is {age}. {name} lives in London".format(name="Fred", age=24)
+f5 = "Galactic position x = {pos[0]}, y={pos[1]}, z={pos[2]}".format(pos=(65.2, 23.1, 82.2))
+
+import math
+f6 = "Math constants: pi={m.pi}, e={m.e}".format(m=math)
+f7 = "Math constants: pi={m.pi:.3f}, e={m.e:.3f}".format(m=math)
+```
+
+**String - literal string interpolation (F-String)**
+```python
+# Literal string interpolation (F-String) ...
+# ... available in Python >= 3.6
+
+import math
+
+f8 = f"one plus one is {1 + 1}"
+f9 = f"Math constants: pi={math.pi}, e={math.e}"
 ```
