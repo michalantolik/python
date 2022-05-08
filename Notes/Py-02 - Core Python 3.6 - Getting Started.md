@@ -173,6 +173,10 @@ if __name__ == "__main__":
 
 ## Objects and Types
 
+### **EVERTHING IN PYTHON IS AN OBJECT:**
+### - Variables (even integers) ...
+### - Modules, Functions, ...
+
 **Python variables - Core Rules !!!**
 - The assignment operator only binds an object to a name ...
 - ... it never copies an object to a value
@@ -263,4 +267,51 @@ print("dir(math.sin) =", "\n", dir(math.sin), "\n")
 
 print("math.sin.__name__ =", math.sin.__name__)
 print("math.sin.__doc__ =", math.sin.__doc__)
+```
+
+## Collections - Tuples
+
+**Tuple basics**
+- Immutable sequences of arbitrary objects
+- Once created, the objects within them cannot be replaced or removed ...
+- ... and new elements cannot be added
+
+```python
+t1 = ("Norway", 4.953, 3)   # Tuple
+t2 = t1 + ("a", "b", "c")   # Concatenated tuple
+t3 = t1 * 3                 # Replicated tuple
+t4 = ((1,2), (3,4), (5,6))  # Nested tuple
+t5 = (391,)                 # Single element tuple ("," is required, otherwise -> int)
+t6 = ()                     # Empty tuple
+t7 = 4, 5, 2, 7, 6          # Parentheses omitted
+t8 = tuple([45, 73, 56])    # Tuple constructor (from list)
+t9 = tuple("Bicycle")       # Tuple constructor (from str)
+c  = 5 in (4, 5, 6)         # Check if tuples contains given element
+nc  = 5 not in (4, 5, 6)    # Check if tuples does NOT contains given element
+```
+
+**Simple tuple unpacking**
+- Tuple unpacking is destructuring operation that unpacks data structures ...
+- ... into named references
+
+```python
+def minmax(items):
+    return min(items), max(items)
+
+lower, upper = minmax([34, 52, 24, 56, 89, 99, 3])
+```
+
+**Nested tuple unpacking**
+- Tuple unpacking also works with nested tuples
+
+```python
+(a, (b, (c, d))) = (4, (3, (2, 1)))
+```
+
+**Swapping variables using tuples**
+```python
+a = "jelly"
+b = "bean"
+
+a, b = b, a
 ```
