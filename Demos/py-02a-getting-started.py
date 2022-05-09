@@ -105,8 +105,9 @@ i = int("1010", 2)
 i = int("0xFF", 16)
 
 ### int to float
-f = float(7.16)
 f = float(7)
+
+### special float values
 f = float("nan")
 f = float("inf")
 f = float("-inf")
@@ -220,6 +221,12 @@ colors = {"crimson": 0xdc143c, "coral": 0xff7f50, "teal": 0x008080}
 for color in colors:
     print(color, colors[color])
 
+print()
+
+for index, city in enumerate(cities):
+    print(f"cities[{index}] = {city}")
+    
+print()
 
 print("\n#################################")
 print('### "STR" TYPE')
