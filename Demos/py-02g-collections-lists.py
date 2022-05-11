@@ -17,7 +17,7 @@ print("### List basics")
 print("##################################\n")
 
 a1 = []                                           # empty list
-a2 = [1, 2, 6, 4, 6, 9, 8]                        # list of integers
+a2 = [1, 2, 6, 4, 6, 6, 8]                        # list of integers
 a3 = a2 * 4                                       # replicated list
 a4 = [0] * 9                                      # replicated list
 a5 = ["apple", "organge", "pear"]                 # list of strings
@@ -78,7 +78,7 @@ print("len(a2)  =", count)
 
 
 print("\n##################################")
-print('### List - "find" and "count"')
+print('### List - "index" and "count"')
 print("##################################\n")
 
 index = a2.index(6)      # find the index of the first list element which is equal to "6"

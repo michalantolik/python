@@ -46,7 +46,7 @@ print("### Partition")
 print("##################################\n")
 
 s6 = "unforgetable"
-partitioned = s6.partition("forget")         # Partitioned string (into tuple)
+partitioned = s6.partition("forget")         # Partitioned string (into tuple with 3 elements)
 partA, partB, partC = s6.partition("forget") # Partitioned and unpacked
 
 print("s6 = ", s6)
