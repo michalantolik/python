@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Correctly detect Git repo language
+Notes/* linguist-vendored
+*.py linguist-vendored=false
