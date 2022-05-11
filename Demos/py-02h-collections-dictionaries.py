@@ -29,6 +29,10 @@ d3 = dict(a='alfa', b='bravo')                 # dictionary from keyword argumen
 li = [('alice', 1), ('bob', 2), ('eve', 3)]    # dictionary from list of tuples
 d4 = dict(li)
 
+print("d1 =", d1)
+print("d2 =", d2)
+print("d3 =", d3)
+print("d4 =", d4)
 
 print("\n##################################")
 print("### Dictionary - iterating")
@@ -83,19 +87,29 @@ print("\n##################################")
 print('### List - "del"')
 print("##################################\n")
 
+print("d2 =", d2)
+
 del d2['alice']   # remove item from the dictionary
+
+print("d2 =", d2)
 
 
 print("\n##################################")
 print('### List - add new element')
 print("##################################\n")
 
+print("d2 =", d2)
+
 d2['alice'] = 1
+
+print("d2 =", d2)
 
 
 print("\n##################################")
 print("### Dictionary - merging")
 print("##################################\n")
+
+print("d2 =", d2)
 
 d2 = {'alice': 1, 'bob': 2, 'eve': 3}
 d3 = {'alfa': 4, 'bravo': 5}
@@ -105,6 +119,8 @@ d3 = {'alfa': 4, 'bravo': 5}
 #          ... then the values for this keys will be replaced in "d2"
 #          ... with the values from "d3"
 d2.update(d3) 
+
+print("d2 =", d2)
 
 
 print("\n##################################")
@@ -118,3 +134,8 @@ c1 = d2.copy()
 
 # using "dict()" constructor
 c2 = dict(d2)
+
+
+print("d2 =", d2)
+print("c1 =", c1)
+print("c2 =", c2)
