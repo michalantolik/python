@@ -72,7 +72,7 @@ print()
 
 
 print("\n##################################")
-print('### Dict - "in" and "not in"')
+print('### Dictionary - "in" and "not in"')
 print("##################################\n")
 
 isIn = 'alice' in d2          # check whether 'alice' key is in "d2"
@@ -84,7 +84,7 @@ print('"alice" not in d2  =', isNotIn)
 
 
 print("\n##################################")
-print('### List - "del"')
+print('### Dictionary - "del"')
 print("##################################\n")
 
 print("d2 =", d2)
@@ -95,7 +95,7 @@ print("d2 =", d2)
 
 
 print("\n##################################")
-print('### List - add new element')
+print('### Dictionary - add new element')
 print("##################################\n")
 
 print("d2 =", d2)
