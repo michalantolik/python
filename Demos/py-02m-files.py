@@ -39,14 +39,14 @@ import sys
 defaultEncoding = sys.getdefaultencoding()
 
 
-print("sys.getdefaultencoding() = ", defaultEncoding)
+print("sys.getdefaultencoding() =", defaultEncoding)
 
 
 print("\n##################################")
 print("### Writing Text")
 print("##################################\n")
 
-# Open file for write in write mode
+# Open file for write in text mode
 fw = open('dummy.txt', mode='wt', encoding='utf-8')
 
 # "write()" returns the number of codepoints written (NOT the file length !)
