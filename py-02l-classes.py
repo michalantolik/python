@@ -186,21 +186,39 @@ print("##################################\n")
 
 class BaseClass:
     
+    def __init__(self, m):
+        self._m = m
+
+    def get_m(self):
+        return self._m
+
     def say_hello(self):
         print('Hello!')
         
+
 class DerivedClass1(BaseClass):
-    pass
+    
+    def __init__(self, m):
+        super().__init__(m)
+
 
 class DerivedClass2(BaseClass):
-    pass
+    
+    def __init__(self, m):
+        super().__init__(m)
     
     
-bc = BaseClass()
-dc1 = DerivedClass1()
-dc2 = DerivedClass2()
+bc = BaseClass(2)
+dc1 = DerivedClass1(5)
+dc2 = DerivedClass2(7)
 
 
 bc.say_hello()
 dc1.say_hello()
 dc2.say_hello()
+
+print()
+
+print(bc.get_m())
+print(dc1.get_m())
+print(dc2.get_m())
