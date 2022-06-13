@@ -165,3 +165,20 @@ print("########################################\n")
 
 with open('dummy.txt', mode='rt', encoding='utf-8') as fr:
     text = fr.read()
+
+
+print("########################################")
+print('### Deserialize from JSON file')
+print("########################################\n")
+
+import json
+with open('data.json', mode='r') as fr:
+    data = json.load(fr)
+
+
+print("########################################")
+print('### Serialize to JSON file')
+print("########################################\n")    
+
+with open('new_data.json', mode='w') as fw:
+    json.dump(data, fw, indent=2)
