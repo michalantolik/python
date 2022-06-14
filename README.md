@@ -1,2 +1,2 @@
 # python
-My notes from various Python courses
+Code snippets - Python language
